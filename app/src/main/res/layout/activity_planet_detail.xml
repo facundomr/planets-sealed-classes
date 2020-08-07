@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.PlanetDetailActivity">
+
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/solar_system"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/topImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        tools:text="Planet"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topImage"
+        android:padding="16dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        tools:text="This is an example for the Planet description" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/recycler_background"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/satellites_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        android:text="@string/satellites_title" />
+
+    <TextView
+        android:id="@+id/satellites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/satellites_title"
+        tools:text="This is an example for the Planet description" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/satellitesGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="separator,satellites_title, satellites" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

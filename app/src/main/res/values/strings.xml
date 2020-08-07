@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Planets</string>
+    <string name="satellites_title">Satellites</string>
+    <string name="detail">Detail</string>
+</resources>
